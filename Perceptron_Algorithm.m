@@ -2,7 +2,7 @@
 
 function [w] = Perceptron_Algorithm(X, Y)
     
-    % Initialize the hyperplane vector
+    % Initialize the perpendicular hyperplane vector
     w = 0;
 
     % Get the dimension of data points
