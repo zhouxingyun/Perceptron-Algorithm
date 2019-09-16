@@ -1,0 +1,27 @@
+% Example using Perceptron Algorithm
+
+% Initialize the dataset
+
+A = zeros(100, 2);
+Y = zeros(100, 1);
+
+for i = 1:50
+    A(i, 1) = random('Normal' , -6, 1);
+    A(i, 2) = random('Normal' , 6, 1);
+    Y(i) = -1;
+end
+
+for i = 51:100
+    A(i, 1) = random('Normal', 0, 1);
+    A(i, 2) = random('Normal', 0, 1);
+    Y(i) = 1;
+end
+
+[w,s] = Perceptron_Algorithm(A, Y);
+
+figure;
+plot(A(clusters==1,1),A(clusters==1,2),'r.','MarkerSize',12);
+hold on
+plot(A(clusters==2,1),A(clusters==2,2),'b.','MarkerSize',12);
+
+title 'Clustered Points when k = 2';
